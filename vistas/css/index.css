@@ -1,0 +1,31 @@
+.espacioText{
+	margin-bottom: 20px;	
+}
+.espacioWell {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+#formAcceso{
+	overflow:hidden;
+}
+#textoAcceso {
+	margin-top: 15px;
+}
+.txt {
+	color:#000;
+}
+.tamImg {
+	width: 80px;
+	margin-left: 70px;
+}
+#galeria2 img {
+	height: 450px;
+  	width: 100%;
+}
+.footer , .header{
+	background: #5AECC8;
+	text-align: center;
+}
+.clear-both{
+	clear: both;
+}
