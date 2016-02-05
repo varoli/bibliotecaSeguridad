@@ -1,29 +1,107 @@
-2016-Feb-Mon 13:02:51 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 13:02:54 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 13:02:24 Se ha registrado el usuario [quiqui] ::1
-2016-Feb-Mon 13:02:33 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 13:02:42 Inicio de sesion del usuario: [09120002] ::1
-2016-Feb-Mon 13:02:10 Sesion terminada: [09120002] ::1
-2016-Feb-Mon 13:02:43 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 13:02:51 Se ha eliminado el usuario con IP [2011120175] ::1
-2016-Feb-Mon 14:02:10 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:43 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:20 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:24 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:42 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:46 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:55 Se ha eliminado el usuario [2011120175] ::1
-2016-Feb-Mon 14:02:53 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:09 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:28 Se ha liberado el usuario [prueba] ::1
-2016-Feb-Mon 14:02:42 Se ha liberado el usuario [javier] ::1
-2016-Feb-Mon 14:02:30 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:33 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:43 Se ha liberado el usuario [juancarlos] ::1
-2016-Feb-Mon 14:02:56 Se ha desbloqueado el usuario con IP ::1
-2016-Feb-Mon 14:02:51 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:54 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Mon 14:02:33 Se ha desbloqueado el usuario con IP 3
-2016-Feb-Mon 14:02:12 Sesion terminada: [2011120175] ::1
-2016-Feb-Mon 14:02:22 Inicio de sesion del usuario: [2011120175] ::1
-2016-Feb-Thu 12:02:41 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:50 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:56 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:09 Se ha liberado el usuario [2011120176] ::1
+2016-Feb-Thu 13:02:57 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:03 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:14 Se ha liberado el usuario [Alumno] ::1
+2016-Feb-Thu 13:02:32 Se ha liberado el usuario con IP ::1
+2016-Feb-Thu 13:02:12 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:19 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 13:02:26 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 13:02:30 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:26 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:29 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:35 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:37 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:54 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:56 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:18 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:23 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 13:02:30 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 13:02:30 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:52 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:55 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 13:02:03 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 13:02:08 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 16:02:57 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 16:02:01 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:15 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:19 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 16:02:23 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 16:02:37 Inicio de sesion del usuario: [09120002] ::1
+2016-Feb-Thu 16:02:09 Sesion terminada: [09120002] ::1
+2016-Feb-Thu 16:02:15 Usuario bloqueado por exceso de intentos: [demo] ::1
+2016-Feb-Thu 16:02:15 Ip intentos: [1] ::1
+2016-Feb-Thu 16:02:15 Usuario intentos: [5] ::1
+2016-Feb-Thu 16:02:19 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:21 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:25 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:14 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:35 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:53 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:56 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:08 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:49 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:00 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:09 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:26 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:52 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:06 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 16:02:21 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 16:02:24 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:43 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:32 Ip intentos: [1] ::1
+2016-Feb-Thu 17:02:32 Usuario intentos: [1] ::1
+2016-Feb-Thu 17:02:35 Ip intentos: [2] ::1
+2016-Feb-Thu 17:02:35 Usuario intentos: [2] ::1
+2016-Feb-Thu 17:02:36 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:36 Ip intentos: [3] ::1
+2016-Feb-Thu 17:02:36 Usuario intentos: [3] ::1
+2016-Feb-Thu 17:02:43 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:43 Ip intentos: [4] ::1
+2016-Feb-Thu 17:02:43 Usuario intentos: [4] ::1
+2016-Feb-Thu 17:02:11 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:11 Ip intentos: [5] ::1
+2016-Feb-Thu 17:02:11 Usuario intentos: [5] ::1
+2016-Feb-Thu 17:02:15 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 17:02:18 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 17:02:25 Inicio de sesion del usuario: [09120002] ::1
+2016-Feb-Thu 17:02:31 Sesion terminada: [09120002] ::1
+2016-Feb-Thu 17:02:23 Ip intentos: [1] ::1
+2016-Feb-Thu 17:02:23 Usuario intentos: [1] ::1
+2016-Feb-Thu 17:02:18 Ip intentos: [2] ::1
+2016-Feb-Thu 17:02:18 Usuario intentos: [2] ::1
+2016-Feb-Thu 17:02:22 Usuario bloqueado por exceso de intentos: [2011120177] ::1
+2016-Feb-Thu 17:02:22 Ip intentos: [3] ::1
+2016-Feb-Thu 17:02:22 Usuario intentos: [5] ::1
+2016-Feb-Thu 17:02:29 Inicio de sesion del usuario: [2011120176] ::1
+2016-Feb-Thu 17:02:32 Sesion terminada: [2011120176] ::1
+2016-Feb-Thu 17:02:29 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:43 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:02 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:52 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:17 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:17 Ip intentos: [1] ::1
+2016-Feb-Thu 17:02:17 Usuario intentos: [3] ::1
+2016-Feb-Thu 17:02:29 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:29 Ip intentos: [2] ::1
+2016-Feb-Thu 17:02:29 Usuario intentos: [4] ::1
+2016-Feb-Thu 17:02:32 Usuario bloqueado por exceso de intentos: [2011120175] ::1
+2016-Feb-Thu 17:02:32 Ip intentos: [3] ::1
+2016-Feb-Thu 17:02:32 Usuario intentos: [5] ::1
+2016-Feb-Thu 17:02:03 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:35 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:13 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:15 Ip intentos: [1] ::1
+2016-Feb-Thu 17:02:15 Usuario intentos: [1] ::1
+2016-Feb-Thu 17:02:20 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:30 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:37 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:29 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:43 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:30 Ip intentos: [1] ::1
+2016-Feb-Thu 17:02:30 Usuario intentos: [2] ::1
+2016-Feb-Thu 17:02:36 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:03 Inicio de sesion del usuario: [2011120175] ::1
+2016-Feb-Thu 17:02:22 Sesion terminada: [2011120175] ::1
+2016-Feb-Thu 17:02:59 Inicio de sesion del usuario: [2011120175] ::1

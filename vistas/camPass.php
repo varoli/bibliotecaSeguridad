@@ -1,3 +1,4 @@
+<script src="vistas/js/main.js"></script>
 <div class="modal fade" id="camPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-lg modal-dialog" role="document">
     <div class="modal-content">

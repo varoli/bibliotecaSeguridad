@@ -2,6 +2,7 @@
     @session_start();
     
     require_once("vendor/autoload.php");
+    require_once("vistas/BDManager.php");
     $app = new \Slim\Slim(array("templates.path"=>"./vistas"));
 
     $app->contentType("text/html; charset=utf-8");
@@ -42,6 +43,8 @@
         }
         $listaIp= '';
         $listaUsuario='';
+        //$mostrarUsuarioSesion = "";
+         
         if($_SESSION["rol"]=="administrador"){
             $consultaResultante = $bd->prepare("SELECT id_ip,ip FROM bloqueoip");
             $consultaResultante->execute(); 
@@ -65,7 +68,7 @@
         }
       $app->render("liberarIp.php", array("ipBloqueada"=>$listaIp,
                                           "listaUser"=>$listaUsuario,
-                                          "menu"=>"<li><a href='#camPassword' data-toggle='modal'>Cambiar password</a></li><li><a href='salir'>Cerrar sesion</a></li>"));
+                                          "menu"=>"<li><a href='#camPassword' data-toggle='modal'>Cambiar password</a></li><li><a href='salir'>Cerrar sesion</a></li><li class='label label-info'><h4>". $_SESSION["nombreCompleto"] ."</h4></li>"));
         include_once("vistas/camPass.php");
          if($_SESSION["rol"]=="administrador"){
              $app->render("registrar.php");
@@ -73,15 +76,33 @@
              include_once("vistas/guiAlumno.php");
          }
         
-    });
-  $app->get("/camPass", function() use($app, $bd){
+    })->name("inicio");
+  $app->post("/camPass/", function() use($app, $bd){
         if(sesionExapirada()){
             $app->redirect("/bibliotecaseguridad/salir");
         }
         $passActual= $app->request->post("passAnt");
         $passNueva= $app->request->post("passNueva");
-        
-        $consultaResultante = $bd->prepare("SELECT matricula FROM pass WHERE password=sha1('$passActual') AND matricula='".               $_SESSION["usuario"] ."';");
+        $dbManejador = new BDManager();
+        $resConsulta = $dbManejador->realizarConsulta("SELECT fecha FROM pass WHERE matricula = '". $_SESSION["usuario"] ."' AND password = sha1('$passActual')");
+      
+        if($resConsulta){
+            $resConsulta = $dbManejador->realizarConsulta("SELECT fecha FROM pass WHERE matricula = '". $_SESSION["usuario"] ."' AND password = sha1('$passNueva')");
+            if($resConsulta){
+                echo("La contrasenia ya existe en el historial");
+            }else {
+                $resConsulta = $dbManejador->realizarConsulta("SELECT password, fecha FROM pass WHERE matricula= '". $_SESSION["usuario"]."' ORDER BY fecha DESC LIMIT 3");
+                if(count($resConsulta) >= 3){
+                    $resConsulta = $dbManejador->realizarAccion("DELETE FROM pass WHERE matricula= '". $_SESSION["usuario"]. "' ORDER BY fecha ASC LIMIT 1");
+                }
+                $resConsulta = $dbManejador->realizarAccion("INSERT INTO pass VALUES('". $_SESSION["usuario"] ."', sha1('$passNueva'), NOW())");
+                echo("La contrase;a fue cambiada correctamente");
+            }
+        }else{
+            echo("No existe la contrasenia actual");
+        }
+        echo("<br><a href='".$app->urlFor("inicio") ."'> Regresar </a>");
+       /* $consultaResultante = $bd->prepare("SELECT matricula FROM pass WHERE password=sha1('$passActual') AND matricula='".               $_SESSION["usuario"] ."';");
         $consultaResultante->execute();
        if($consultaResultante->rowCount()>0){
             $consultaResultante = $bd->prepare("SELECT matricula FROM pass WHERE password=sha1('$passNueva') AND matricula='".                 $_SESSION["usuario"] ."';");
@@ -93,20 +114,22 @@
                 $consultaResultante2->execute();
             }
         }else {
-           /* $consultaResultante = $bd->prepare("INSERT INTO pass(password) values('$passNueva')");
+            $consultaResultante = $bd->prepare("INSERT INTO pass(password) values('$passNueva')");
             $consultaResultante->execute(); 
             if($consultaResultante){
                echo("<script>alert('El cambio de contraseña se a realizado correctamente');</script>"); 
             }else {
                 echo("<script>alert('No se realizó el cambio');</script>"); 
-            }*/
-        }
+            }
+        }*/
     });
     $app->post("/login/", function() use($app,$bd){
         expiraSesion();
         $solicitud=$app->request();
         $user= $app->request->post("user");
         $pass= $app->request->post("pass");
+        $dbManejador = new BDManager();
+        
         if(empty($_SESSION["intentosIp"])){
             $_SESSION["intentosIp"]=0;
         }
@@ -116,15 +139,16 @@
             $resultados= $consultaResultante->fetchAll(PDO::FETCH_ASSOC);
             $_SESSION["$user"]=$resultados[0]["intentosFallidos"];
         }
-        $consultaResultante = $bd->prepare("SELECT p.matricula, p.nombre, p.apellidos, u.rol, ps.fecha FROM persona p, usuario u, pass ps WHERE p.matricula= u.matricula AND u.matricula=ps.matricula AND u.matricula='$user' AND ps.password=sha1('$pass') AND u.intentosFallidos<3");
-        $consultaResultante->execute();
-        if($consultaResultante->rowCount()>0){ //Si hay usuarios
-            $resultados= $consultaResultante->fetchAll(PDO::FETCH_ASSOC);
-            $_SESSION["usuario"]=$resultados[0]["matricula"];
-            $_SESSION["nombreCompleto"]=$resultados[0]["nombre"]. " ". $resultados[0]["apellidos"];
-            $_SESSION["rol"]=$resultados[0]["rol"];
+        $resConsulta = $dbManejador->realizarConsulta("SELECT ps.password FROM pass ps, usuario us WHERE ps.matricula = us.matricula AND ps.matricula = '$user' AND us.intentosFallidos < 3 ORDER BY ps.fecha DESC LIMIT 1");
+        //$consultaResultante = $bd->prepare("SELECT p.matricula, p.nombre, p.apellidos, u.rol, ps.fecha FROM persona p, usuario u, pass ps WHERE p.matricula= u.matricula AND u.matricula=ps.matricula AND u.matricula='$user' AND ps.password=sha1('$pass') AND u.intentosFallidos<3");
+        //$consultaResultante->execute();
+        if($resConsulta && (strcmp($resConsulta[0]['password'],sha1($pass)) == 0)){ //Si hay usuarios
+            $resConsulta = $dbManejador->realizarConsulta("SELECT p.matricula, p.nombre, p.apellidos, u.rol, ps.fecha FROM persona p, usuario u, pass ps WHERE p.matricula= u.matricula AND u.matricula=ps.matricula AND u.matricula='$user' AND ps.password=sha1('$pass') AND u.intentosFallidos<3");
+            $_SESSION["usuario"]=$resConsulta[0]["matricula"];
+            $_SESSION["nombreCompleto"]=$resConsulta[0]["nombre"]. " ". $resConsulta[0]["apellidos"];
+            $_SESSION["rol"]=$resConsulta[0]["rol"];
             $_SESSION["intentosIp"]=0;
-            $_SESSION["fechaPass"]=$resultados[0]["fecha"];
+            $_SESSION["fechaPass"]=$resConsulta[0]["fecha"];
             $solicitud=$app->request();
             guardarBitacora("Inicio de sesion del usuario: [$user]", $solicitud->getIp());
             $app->redirect("/bibliotecaseguridad/inicio");
